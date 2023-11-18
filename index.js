@@ -17,6 +17,10 @@ function btnClick(event) {
     if ("0" <= event && event <= "9") {
         Display += event;
     }
+    else if (["+", "-", "*", "/"].includes(event)) {
+        Display = "";
+        OP = event;
+    }
 
     document.getElementById("display").textContent = Display;
 }
