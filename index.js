@@ -1,55 +1,41 @@
 const DEBUG = true;
-let X = 0;
-let Y = 0;
-let OP = "+";
+let X = NaN;
+let Y = NaN;
+let OP = "";
 let Display = "";
-
-main();
-
-function main() {
-}
+let Clear = false;
 
 function btnClick(event) {
     if (DEBUG) {
         console.log("clicked", event);
+        console.log(X, OP, Y)
     }
 
     if ("0" <= event && event <= "9") {
+        if (Clear) {
+            X = parseInt(Display);
+            Display = "";
+            Clear = false;
+        }
         Display += event;
     }
     else if (["+", "-", "*", "/"].includes(event)) {
-        Display = "";
         OP = event;
+        Clear = true;
+    }
+    else if (event == "clear") {
+        X = NaN;
+        OP = "";
+        Clear = false;
+        Display = "";
+    }
+    else if (event === "=") {
+        Y = parseInt(Display);
+        Display = compute(X, OP, Y);
+        X = parseInt(Display);
     }
 
     document.getElementById("display").textContent = Display;
-}
-
-function operate() {
-    // Get input values
-    const x = parseFloat(document.getElementById("x").value.toString());
-    const y = parseFloat(document.getElementById("y").value.toString());
-    const operand = document.getElementById("operand").value.toString();
-
-    const res = compute(x, operand, y);
-
-    // Display result
-    const inputs = [x, operand, y];
-    const operation = inputs.join(" ");
-
-    const result = document.getElementById("result");
-    // Remove previous result content
-    while (result.firstChild) {
-        result.firstChild.remove();
-    }
-    var p = document.createElement("p");
-    p.textContent = res;
-    result.appendChild(p);
-
-    if (DEBUG) {
-        console.log(operation);
-        console.log(res);
-    }
 }
 
 function compute(x, operand, y) {
@@ -87,5 +73,5 @@ function divide(x, y) {
     if (y === 0) {
         return NaN;
     }
-    return x / y;
+    return Math.floor(x / y);
 }
