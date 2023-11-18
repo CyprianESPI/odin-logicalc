@@ -9,6 +9,37 @@
 
 <body>
     <h1>LogiCalc - The Logic Gate Calculator</h1>
+
+    <p>The awkward calculator that uses logic gates and binary numbers</p>
+
+    <h2>Inputs</h2>
+
+    <h3>
+        <label for="x">X:</label>
+        <input type="number" id="x" name="x" min="0" value="7">
+    </h3>
+
+    <h3>
+        <input list="operands" id="operand" name="operand" value="+">
+
+        <datalist id="operands">
+            <option value="+">
+            <option value="-">
+            <option value="*">
+            <option value="/">
+        </datalist>
+    </h3>
+
+    <h3>
+        <label for="y">Y:</label>
+        <input type="number" id="y" name="y" min="0" value="5">
+    </h3>
+
+    <h3>
+        <button>=</button>
+    </h3>
+
+    <h2>Result</h2>
 </body>
 
 </html>
