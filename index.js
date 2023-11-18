@@ -1,4 +1,10 @@
 const DEBUG = true;
+let X = 0;
+let Y = 0;
+let OP = "+";
+
+let Display = "";
+
 
 main();
 
@@ -9,6 +15,8 @@ function btnClick(event) {
     if (DEBUG) {
         console.log("clicked", event);
     }
+
+
 }
 
 function operate() {

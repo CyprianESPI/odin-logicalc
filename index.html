@@ -16,34 +16,30 @@
     <p>The awkward calculator that uses logic gates and binary numbers</p>
 
     <main>
-        <div id="result"></div>
-
         <div class="calculator">
-            <div class="flex-grid">
-                <div class="col">
-                    <button id="7" onclick="btnClick(7)">7</button>
-                    <button id="4" onclick="btnClick(4)">4</button>
-                    <button id="1" onclick="btnClick(1)">1</button>
-                    <button id="0" onclick="btnClick(0)">0</button>
-                </div>
-                <div class="col">
-                    <button id="8" onclick="btnClick(8)">8</button>
-                    <button id="5" onclick="btnClick(5)">5</button>
-                    <button id="2" onclick="btnClick(2)">2</button>
-                    <button id="clear" onclick="btnClick('clear')">A/C</button>
-                </div>
-                <div class="col">
-                    <button id="9" onclick="btnClick(9)">9</button>
-                    <button id="6" onclick="btnClick(6)">6</button>
-                    <button id="3" onclick="btnClick(3)">3</button>
-                    <button onclick="operate()">=</button>
-                </div>
-                <div class="col">
-                    <button id="+" onclick="btnClick('+')">+</button>
-                    <button id="-" onclick="btnClick('-')">-</button>
-                    <button id="*" onclick="btnClick('*')">*</button>
-                    <button id="/" onclick="btnClick('/')">/</button>
-                </div>
+            <p class="calcDisplay" id="display">0</p>
+            <div class="calcBtnsContainer">
+                <button id="7" class="num" onclick="btnClick(7)">7</button>
+                <button id="8" class="num" onclick="btnClick(8)">8</button>
+                <button id="9" class="num" onclick="btnClick(9)">9</button>
+                <button id="/" class="operand" onclick="btnClick('/')">/</button>
+
+                <button id="4" class="num" onclick="btnClick(4)">4</button>
+                <button id="5" class="num" onclick="btnClick(5)">5</button>
+                <button id="6" class="num" onclick="btnClick(6)">6</button>
+                <button id="*" class="operand" onclick="btnClick('*')">*</button>
+
+
+                <button id="1" class="num" onclick="btnClick(1)">1</button>
+                <button id="2" class="num" onclick="btnClick(2)">2</button>
+                <button id="3" class="num" onclick="btnClick(3)">3</button>
+                <button id="-" class="operand" onclick="btnClick('-')">-</button>
+
+
+                <button id="0" class="num" onclick="btnClick(0)">0</button>
+                <button id="clear" class="special" onclick="btnClick('clear')">A/C</button>
+                <button id="=" class="operand" onclick="btnClick('=')">=</button>
+                <button id="+" class="operand" onclick="btnClick('+')">+</button>
             </div>
         </div>
     </main>
