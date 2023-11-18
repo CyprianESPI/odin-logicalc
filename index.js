@@ -2,9 +2,7 @@ const DEBUG = true;
 let X = 0;
 let Y = 0;
 let OP = "+";
-
 let Display = "";
-
 
 main();
 
@@ -16,7 +14,11 @@ function btnClick(event) {
         console.log("clicked", event);
     }
 
+    if ("0" <= event && event <= "9") {
+        Display += event;
+    }
 
+    document.getElementById("display").textContent = Display;
 }
 
 function operate() {
