@@ -16,34 +16,56 @@
 
     <h2>Inputs</h2>
 
-    <h3>
-        <label for="x">X:</label>
-        <input type="number" id="x" name="x" min="0" value="7">
-    </h3>
+    <main>
+        <div>
+            <div id="result"></div>
 
-    <h3>
-        <input list="operands" id="operand" name="operand" value="+">
+            <div id="calcBtns">
+                <button id="0" onclick="btnClick(0)">0</button>
+                <button id="1" onclick="btnClick(1)">1</button>
+                <button id="2" onclick="btnClick(2)">2</button>
+                <button id="3" onclick="btnClick(3)">3</button>
+                <button id="4" onclick="btnClick(4)">4</button>
+                <button id="5" onclick="btnClick(5)">5</button>
+                <button id="6" onclick="btnClick(6)">6</button>
+                <button id="7" onclick="btnClick(7)">7</button>
+                <button id="8" onclick="btnClick(8)">8</button>
+                <button id="9" onclick="btnClick(9)">9</button>
+                <button id="+" onclick="btnClick('+')">+</button>
+                <button id="-" onclick="btnClick('-')">-</button>
+                <button id="*" onclick="btnClick('*')">*</button>
+                <button id="/" onclick="btnClick('/')">/</button>
+                <button id="clear" onclick="btnClick('clear')">Clear</button>
+            </div>
+        </div>
 
-        <datalist id="operands">
-            <option value="+">
-            <option value="-">
-            <option value="*">
-            <option value="/">
-        </datalist>
-    </h3>
+        <h3>
+            <label for="x">X:</label>
+            <input type="number" id="x" name="x" min="0" value="7">
+        </h3>
 
-    <h3>
-        <label for="y">Y:</label>
-        <input type="number" id="y" name="y" min="0" value="5">
-    </h3>
+        <h3>
+            <input list="operands" id="operand" name="operand" value="+">
 
-    <h3>
-        <button onclick="operate()">=</button>
-    </h3>
+            <datalist id="operands">
+                <option value="+">
+                <option value="-">
+                <option value="*">
+                <option value="/">
+            </datalist>
+        </h3>
 
-    <h2>Result</h2>
+        <h3>
+            <label for="y">Y:</label>
+            <input type="number" id="y" name="y" min="0" value="5">
+        </h3>
 
-    <div id="result"></div>
+        <h3>
+            <button onclick="operate()">=</button>
+        </h3>
+    </main>
+
+
 </body>
 
 </html>

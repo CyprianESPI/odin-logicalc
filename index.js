@@ -1,5 +1,16 @@
 const DEBUG = true;
 
+main();
+
+function main() {
+}
+
+function btnClick(event) {
+    if (DEBUG) {
+        console.log("clicked", event);
+    }
+}
+
 function operate() {
     // Get input values
     const x = parseFloat(document.getElementById("x").value.toString());
